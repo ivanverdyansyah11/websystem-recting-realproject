@@ -12,7 +12,13 @@ class film_model
 
     public function getAllMovies()
     {
-        $this->db->query('SELECT * FROM movies');
+        $this->db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 10');
+        return $this->db->resultSet();
+    }
+
+    public function getAllMoviesRating()
+    {
+        $this->db->query('SELECT * FROM movies ORDER BY rating DESC LIMIT 10');
         return $this->db->resultSet();
     }
 
