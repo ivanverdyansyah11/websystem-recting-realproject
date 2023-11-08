@@ -52,10 +52,7 @@ class Film extends Controller
     $data['title'] = " Koleksi Film";
     $data['movie'] = $this->model('film_model')->getMovie($id);
 
-    $this->view('templates/header', $data);
-    $this->view('templates/sidebar', $data);
     $this->view('koleksi-film/edit', $data);
-    $this->view('templates/footer', $data);
   }
 
   public function editAction($id)
