@@ -6,9 +6,7 @@ class Login extends Controller
   {
     if (!isset($_SESSION['user'])) {
       $data['title'] = "Login";
-      $this->view('templates/header', $data);
       $this->view('login/index', $data);
-      $this->view('templates/footer', $data);
     } else {
       header("Location:" . BASEURL . "film");
       exit;

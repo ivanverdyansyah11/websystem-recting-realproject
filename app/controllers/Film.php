@@ -8,10 +8,7 @@ class Film extends Controller
       $data['title'] = "Koleksi Film";
       $data['movies'] = $this->model('film_model')->getAllMovies();
 
-      $this->view('templates/header', $data);
-      $this->view('templates/sidebar', $data);
       $this->view('koleksi-film/index', $data);
-      $this->view('templates/footer', $data);
     } else {
       header("Location:" . BASEURL . "login");
       exit;

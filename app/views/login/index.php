@@ -1,38 +1,43 @@
-<body class="bg-gradient-primary">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-12 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-12">
-                                <div class="p-5">
-                                    <div class="flasher-wrap w-100">
-                                        <?php Flasher::flash(); ?>
-                                    </div>
-                                    <div class="text-center">
-                                        <h1 class="text-gray-900 mb-4 font-weight-bolder">Login Account</h1>
-                                    </div>
-                                    <form class="user" action="<?= BASEURL; ?>/login/loginAction" method="post">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" placeholder="Enter Email" name="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" placeholder="Enter Password" name="password">
-                                        </div>
-                                        <div class="form-group">
-                                        </div>
-                                        <hr>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page | Recting Application</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="<?= BASEURL; ?>assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="login">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xxl-5">
+                    <div class="card-login mt-5">
+                        <div class="flasher-wrap w-100">
+                            <?php Flasher::flash(); ?>
                         </div>
+                        <h2 class="title text-center">Welcome Back</h2>
+                        <form class="form d-flex flex-column" action="<?= BASEURL; ?>/login/loginAction" method="post">
+                            <div class="input-group d-flex flex-column">
+                                <label for="email">Email</label>
+                                <input type="text" class="input" id="email" name="email" placeholder="Enter your email..">
+                            </div>
+                            <div class="input-group d-flex flex-column">
+                                <label for="password">Password</label>
+                                <input type="password" class="input" id="password" name="password" placeholder="Enter your password..">
+                            </div>
+                            <button type="submit" class="button-primary w-100 text-center" style="margin-top: 18px;">Login Account</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
