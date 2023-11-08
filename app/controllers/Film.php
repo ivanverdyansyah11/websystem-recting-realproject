@@ -20,19 +20,13 @@ class Film extends Controller
     $data['title'] = " Koleksi Film";
     $data['movie'] = $this->model('film_model')->getMovie($id);
 
-    $this->view('templates/header', $data);
-    $this->view('templates/sidebar', $data);
     $this->view('koleksi-film/detail', $data);
-    $this->view('templates/footer', $data);
   }
 
   public function tambah()
   {
     $data['title'] = " Koleksi Film";
-    $this->view('templates/header', $data);
-    $this->view('templates/sidebar', $data);
     $this->view('koleksi-film/tambah', $data);
-    $this->view('templates/footer', $data);
   }
 
   public function tambahAction()
@@ -40,7 +34,7 @@ class Film extends Controller
     $typeName = explode('/', $_FILES['thumbnail']['type']);
     $filename = uniqid() . '.' . $typeName[1];
     $_POST['thumbnail'] = $filename;
-    $path = __DIR__ . '/../../public/img/thumbnails/' . $filename;
+    $path = __DIR__ . '/../../public/assets/img/thumbnails/' . $filename;
 
     if (move_uploaded_file($_FILES['thumbnail']['tmp_name'], $path) && $this->model('film_model')->insertFilm($_POST) > 0) {
       Flasher::setFlash('success', 'Berhasil Menambahkan Koleksi Film!');

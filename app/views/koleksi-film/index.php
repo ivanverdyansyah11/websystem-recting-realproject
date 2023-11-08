@@ -20,7 +20,7 @@
                     <div class="sidebar d-flex flex-column align-items-center">
                         <img src="<?= BASEURL; ?>assets/img/brand-logo.svg" alt="Brand Logo" class="img-fluid brand-logo">
                         <div class="sidebar-items d-flex flex-column gap-2 w-100">
-                            <a href="#" class="item-link">Collection Film</a>
+                            <a href="<?= BASEURL; ?>film" class="item-link">Collection Film</a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                                 <?php foreach ($data['movies'] as $i => $movie) { ?>
                                     <tr>
                                         <td><?= $i + 1 ?></td>
-                                        <td><img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid" width="100"></td>
+                                        <td><img src="<?= BASEURL ?>assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid" width="100"></td>
                                         <td><?= $movie['title']; ?></td>
                                         <td>
                                             <div class="wrapper d-flex gap-2">
