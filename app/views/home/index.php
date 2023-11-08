@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $data['title']; ?></title>
+    <title>Home Page | Recting Application</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -51,10 +51,11 @@
                         <div class="swiper-slide">
                             <div class="wrapper w-100 position-relative" style="aspect-ratio: 4/1.6;">
                                 <div class="wrapper-image w-100 d-flex align-items-center position-relative" style="aspect-ratio: 4/1; overflow: hidden;">
-                                    <img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid w-100">
+                                    <img src="<?= BASEURL ?>/assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid w-100">
+                                    <!-- <iframe class="w-100" height="500" src="<?= $movie['trailer'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                                 </div>
                                 <div class="wrapper-content position-absolute bottom-0 start-50 translate-middle-x d-flex gap-4 align-items-center">
-                                    <img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" width="240" style="aspect-ratio: 2.9/4;">
+                                    <img src="<?= BASEURL ?>/assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" width="240" style="aspect-ratio: 2.9/4;">
                                     <div class="wrapper">
                                         <h1 class="text-light"><?= $movie['title']; ?></h1>
                                         <h4 class="mb-0 text-secondary">Watch the trailer</h4>
@@ -82,7 +83,7 @@
                         <div class="swiper-wrapper">
                             <?php foreach ($data['movies_recent'] as $movie) { ?>
                                 <div class="swiper-slide">
-                                    <img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
+                                    <img src="<?= BASEURL ?>assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
                                     <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
                                         <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
                                     </div>
@@ -106,7 +107,7 @@
                         <div class="swiper-wrapper">
                             <?php foreach ($data['movies_rating'] as $movie) { ?>
                                 <div class="swiper-slide">
-                                    <img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
+                                    <img src="<?= BASEURL ?>assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
                                     <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
                                         <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
                                     </div>
