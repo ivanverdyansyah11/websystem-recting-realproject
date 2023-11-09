@@ -193,3 +193,11 @@ body {
     padding: 12px;
     color: rgba(var(--light-color), 0.72);
 }
+
+nav .nav-link {
+    color: rgba(var(--light-color), 0.72) !important;
+}
+
+nav .nav-link:hover {
+    color: rgba(var(--light-color), 1) !important;
+}
