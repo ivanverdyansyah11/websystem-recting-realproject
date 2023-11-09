@@ -81,7 +81,31 @@
                 </div>
             </section>
 
-            <section class="recent" style="margin-top: 120px;">
+            <section class="search" style="margin-top: 120px;">
+                <h2 class="text-warning text-semibold">hasil Pencarian</h2>
+                <p class="subtitle">Cari film favoritemu yang main</p>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <?php foreach ($data['movies_search'] as $movie) { ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?= BASEURL ?>assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
+                                        <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
+                                            <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent" style="margin: 120px 0;">
                 <h2 class="text-warning text-semibold">Terbaru Untukmu</h2>
                 <p class="subtitle">Film populer terbaru hanya untukmu</p>
 

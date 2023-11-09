@@ -17,15 +17,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2 p-0">
-                    <div class="sidebar d-flex flex-column align-items-center">
-                        <img src="<?= BASEURL; ?>assets/img/brand-logo.svg" alt="Brand Logo" class="img-fluid brand-logo">
+                    <div class="sidebar d-flex flex-column align-items-center bg-danger">
+                        <img src="<?= BASEURL; ?>assets/img/brand-logo-light.svg" alt="Brand Logo" class="img-fluid brand-logo">
                         <div class="sidebar-items d-flex flex-column gap-2 w-100">
                             <a href="<?= BASEURL; ?>film" class="item-link">Collection Film</a>
                         </div>
                     </div>
                 </div>
                 <div class="col p-0">
-                    <div class="topbar d-flex justify-content-end">
+                    <div class="topbar d-flex justify-content-end bg-warning align-items-center gap-3">
+                        <p class="mb-0 username"><?= $_SESSION['user']['username'] ?></p>
                         <div class="wrapper-image">
                             <img src="<?= BASEURL; ?>assets/img/undraw_profile.svg" alt="Profile Image" class="img-fluid profile-image">
                         </div>

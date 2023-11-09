@@ -22,6 +22,14 @@ class film_model
         return $this->db->resultSet();
     }
 
+    public function getMoviesSearch($data)
+    {
+        $this->db->query("SELECT * FROM movies WHERE title LIKE CONCAT('%', :search, '%');");
+        $this->db->bind('search', $data['searching']);
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+
     public function getMovie($id)
     {
         $this->db->query('SELECT * FROM movies WHERE id=:id');

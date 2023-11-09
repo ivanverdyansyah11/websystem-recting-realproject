@@ -30,4 +30,12 @@ class Login extends Controller
       exit;
     }
   }
+
+  public  function logout()
+  {
+    unset($_SESSION['user']);
+    session_destroy();
+    header("Location:" . BASEURL . "login");
+    exit;
+  }
 }
